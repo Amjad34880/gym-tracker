@@ -12,7 +12,7 @@ function App() {
     axios
       .get("http://localhost:5000/api/workouts")
       .then((res) => setWorkouts(res.data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err)) ;
   }, [refresh]);
 
   return (

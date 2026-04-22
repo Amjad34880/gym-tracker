@@ -52,7 +52,7 @@ function WorkoutForm({ refresh, setRefresh, selectedWorkout }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
+    <form className="form" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="User ID"
@@ -83,15 +83,8 @@ function WorkoutForm({ refresh, setRefresh, selectedWorkout }) {
         value={form.weight}
         onChange={(e) => setForm({ ...form, weight: e.target.value })}
       />
-      <input
-        type="text"
-        placeholder="Notes"
-        value={form.notes}
-        onChange={(e) => setForm({ ...form, notes: e.target.value })}
-      />
-
       <button type="submit">
-        {selectedWorkout ? "Update Workout" : "Add Workout"}
+        {selectedWorkout ? "Update" : "Add"}
       </button>
     </form>
   );

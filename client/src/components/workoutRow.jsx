@@ -15,8 +15,10 @@ function WorkoutRow({ workout, onEdit }) {
       <td>{workout.reps}</td>
       <td>{workout.weight}</td>
       <td>
-        <button onClick={() => onEdit(workout)}>Edit</button>
-        <button onClick={handleDelete}>Delete</button>
+        <div className="action-buttons">
+          <button className="edit-btn" onClick={() => onEdit(workout)}>Edit</button>
+          <button className="delete-btn" onClick={handleDelete}>Delete</button>
+        </div>
       </td>
     </tr>
   );

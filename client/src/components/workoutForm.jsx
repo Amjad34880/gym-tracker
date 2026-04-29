@@ -84,7 +84,7 @@ function WorkoutForm({ refresh, setRefresh, selectedWorkout }) {
         onChange={(e) => setForm({ ...form, weight: e.target.value })}
       />
       <button type="submit">
-        {selectedWorkout ? "Update" : "Add"}
+        {selectedWorkout ? "Update" : "Add workout"}
       </button>
     </form>
   );

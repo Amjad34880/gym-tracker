@@ -1,6 +1,6 @@
 import express from "express";
 import User from "../models/User.js";
-import { getUsers, createUser, getUserWorkouts } from "../controllers/userController.js";
+import { getUsers, createUser, getUserWorkouts, updateUser } from "../controllers/userController.js";
 
 
 const router = express.Router();
@@ -8,6 +8,8 @@ const router = express.Router();
 router.get("/", getUsers);
 router.post("/", createUser);
 router.get("/:id/workouts", getUserWorkouts);
+router.put("/:id", updateUser);
+
 
 
 router.get("/", async (req, res) => {
@@ -27,5 +29,6 @@ router.post("/", async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 });
+
 
 export default router;
